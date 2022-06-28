@@ -1,0 +1,14 @@
+def solution(s):
+    answer = ''
+    new_list = s.split(' ')
+    # 공백 기준으로 나누고
+    for i in new_list:
+        for j in range(len(i)):
+            if j % 2 == 0:
+                answer += i[j].upper()
+            else:
+                answer += i[j].lower()
+        answer+= ' '
+        # 다시 공백 넣어주기
+    return answer[0:-1]
+    
