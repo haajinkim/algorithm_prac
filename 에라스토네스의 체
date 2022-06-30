@@ -1,0 +1,11 @@
+def solution(n):
+    num = set(range(2,n+1))
+
+    for i in range(2,n+1):
+        num -= set(range(i*2,n+1,i))
+    
+    return len(num)
+
+    # 1을 제외하고, n을 제외한 n 의 배수를 모두지운다.
+
+    
