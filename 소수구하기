@@ -1,0 +1,12 @@
+input = 20
+def find_prime_list_under_number(number):
+    for i in range(input+1):
+        result = True
+        if i < 2 : 
+            result = False
+        for j in range(2, i):
+            if i % j == 0:
+                result = False
+        if result:
+            print (i,)
+result = find_prime_list_under_number(input)
