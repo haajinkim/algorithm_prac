@@ -1,8 +1,11 @@
-def solution(n): 
-    answer = 0
-    for i in range(n):
-        if i % 1 or i % i == 0:
-            answer += i
-        
-        
-    return len(answer)
+numbers = [1, 1, 1, 1, 1]
+target_number = 3
+
+
+def get_count_of_ways_to_target_by_doing_plus_or_minus(array, target):
+
+
+    return 5
+
+
+print(get_count_of_ways_to_target_by_doing_plus_or_minus(numbers, target_number))  # 5를 반환해야 합니다!
