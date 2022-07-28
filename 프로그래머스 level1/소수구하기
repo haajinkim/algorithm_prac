@@ -8,5 +8,5 @@ def find_prime_list_under_number(number):
             if i % j == 0:
                 result = False
         if result:
-            print (i,)
+            print (i)
 result = find_prime_list_under_number(input)
