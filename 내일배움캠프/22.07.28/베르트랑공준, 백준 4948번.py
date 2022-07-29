@@ -8,20 +8,30 @@
 자연수 n이 주어졌을 때, n보다 크고, 2n보다 작거나 같은 소수의 개수를 구하는 프로그램을 작성하시오. 
 """
 
-n = 10
 
-cnt = 0
+def sosu(n):
+    if n ==1:
+        return False
+    for i in range(2,int(n**0.5)+1):
+        if n%i==0:
+            return False
+    return True							
 
-for i in range(n, 2*n+1):
-    print(i)
-    result = True
-    if i < 2 : 
-        result = False
-    for j in range(2, i):
-        if i % j == 0:
-            result = False
-    if result:
-        cnt += 1
+all_list = list(range(2,246912))		
+memo = []								
 
+for i in all_list:						
+    if sosu(i):							
+        memo.append(i)					
 
-print(cnt)
+n = int(input())
+
+while True:
+    count=0					
+    if n == 0 :
+            break
+    for i in memo:			
+        if n < i <=2*n:		
+            count+=1		
+    print(count)
+    n = int(input())		
