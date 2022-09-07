@@ -6,6 +6,8 @@ graph = []
 
 for _ in range(n):
     graph.append(list(map(int, input())))
+    
+print(graph)
 
 def bfs(x,y):
     dx = [-1,1,0,0]
